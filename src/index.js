@@ -1,36 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import {applyPolyfills, defineCustomElements} from 'h8k-components/loader';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
 
-const SLIDES = [
-    {
-        title: "Today's workout plan",
-        text: "We're gonna do 3 fundamental exercises."
-    },
-    {
-        title: "First, 10 push-ups",
-        text: "Do 10 reps. Remember about full range of motion. Don't rush."
-    },
-    {
-        title: "Next, 20 squats",
-        text: "Squats are important. Remember to keep your back straight."
-    },
-    {
-        title: "Finally, 15 sit-ups",
-        text: "Slightly bend your knees. Remember about full range of motion."
-    },
-    {
-        title: "Great job!",
-        text: "You made it, have a nice day and see you next time!"
-    }
+const SliderContent = [
+  {
+    title: "Hello HackerRank!",
+    text: "Welcome to the world of coding.",
+  },
+  {
+    title: "What is coding?",
+    text: "Coding is the process of writing instructions to a computer to perform a specific task.",
+  },
+  {
+    title: "What is a computer?",
+    text: "A computer is a machine that can perform a set of instructions, or a set of tasks, to perform a specific task.",
+  },
 ];
 
-ReactDOM.render(<App slides={SLIDES} />, document.getElementById('root'));
+ReactDOM.render(
+  <App slides={SliderContent} />,
+  document.getElementById("root")
+);
 registerServiceWorker();
-
-applyPolyfills().then(() => {
-    defineCustomElements(window);
-})
